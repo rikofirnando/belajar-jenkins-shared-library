@@ -1,7 +1,7 @@
 def name() {
-    'Riko Firnando'
+    return 'Riko Firnando'
 }
 
 def email() {
-    'riko@mail.com'
+    return 'riko.firnando@example.com'
 }
