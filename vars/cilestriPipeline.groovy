@@ -33,7 +33,9 @@ def call(Map config = [:]) {
                     expression { PIPELINE_TYPE == 'maven' && commands.contains('clean') }
                 }
                 steps {
-                    maven(['clean'])
+                    script {
+                        maven(['clean'])
+                    }
                 }
             }
 
@@ -42,7 +44,9 @@ def call(Map config = [:]) {
                     expression { PIPELINE_TYPE == 'maven' && commands.contains('compile') }
                 }
                 steps {
-                    maven(['compile'])
+                    script {
+                        maven(['compile'])
+                    }
                 }
             }
 
@@ -55,7 +59,9 @@ def call(Map config = [:]) {
                     }
                 }
                 steps {
-                    maven(['test'])
+                    script {
+                        maven(['test'])
+                    }
                 }
             }
         }
