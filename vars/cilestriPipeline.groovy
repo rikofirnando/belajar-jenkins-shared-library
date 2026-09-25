@@ -14,7 +14,7 @@ def call(Map config = [:]) {
         }
 
         environment {
-            PIPELINE_TYPE = pipelineType
+            PIPELINE_TYPE = "${pipelineType}"
         }
 
         stages {
